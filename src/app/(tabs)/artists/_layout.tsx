@@ -10,6 +10,7 @@ const ArtistsScreenLayout = () => {
 					name="index"
 					options={{
 						headerTitle: 'Artists',
+						headerTitleAlign: 'center',
 					}}
 				/>
 			</Stack>

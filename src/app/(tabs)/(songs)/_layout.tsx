@@ -10,6 +10,7 @@ const SongsScreenLayout = () => {
 					name="index"
 					options={{
 						headerTitle: 'Songs',
+						headerTitleAlign: 'center',
 					}}
 				/>
 			</Stack>

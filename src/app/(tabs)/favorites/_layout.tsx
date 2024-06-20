@@ -10,6 +10,7 @@ const FavoritesScreenLayout = () => {
 					name="index"
 					options={{
 						headerTitle: 'Favorites',
+						headerTitleAlign: 'center',
 					}}
 				/>
 			</Stack>
