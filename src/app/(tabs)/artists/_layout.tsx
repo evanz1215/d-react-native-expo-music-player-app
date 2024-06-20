@@ -12,7 +12,6 @@ const ArtistsScreenLayout = () => {
 					options={{
 						...StackScreenWithSearchBar,
 						headerTitle: 'Artists',
-						headerTitleAlign: 'left',
 					}}
 				/>
 			</Stack>

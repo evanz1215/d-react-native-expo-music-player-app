@@ -12,7 +12,6 @@ const FavoritesScreenLayout = () => {
 					options={{
 						...StackScreenWithSearchBar,
 						headerTitle: 'Favorites',
-						headerTitleAlign: 'left',
 					}}
 				/>
 			</Stack>

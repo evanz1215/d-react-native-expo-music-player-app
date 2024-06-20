@@ -12,7 +12,6 @@ const PlaylistsScreenLayout = () => {
 					options={{
 						...StackScreenWithSearchBar,
 						headerTitle: 'Playlists',
-						headerTitleAlign: 'left',
 					}}
 				/>
 			</Stack>
