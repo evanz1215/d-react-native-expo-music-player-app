@@ -3,6 +3,9 @@ import { screenPadding } from '@/constants/tokens'
 import { useNavigationSearch } from '@/hooks/useNavigationSearch'
 import { defaultStyles } from '@/styles'
 import { ScrollView, StyleSheet, View } from 'react-native'
+import library from '@/assets/data/library.json'
+import { useMemo } from 'react'
+import { trackTitleFilter } from '@/helpers/filter'
 
 export default function SongsScreen() {
 	const search = useNavigationSearch({
@@ -10,6 +13,12 @@ export default function SongsScreen() {
 			placeholder: 'Find in songs',
 		},
 	})
+
+	const filteredTracks = useMemo(() => {
+		if (!search) return library
+
+		return library.filter(trackTitleFilter(search))
+	}, [search])
 
 	return (
 		<View style={defaultStyles.container}>
@@ -19,7 +28,7 @@ export default function SongsScreen() {
 					paddingHorizontal: screenPadding.horizontal,
 				}}
 			>
-				<TracksList scrollEnabled={false} />
+				<TracksList tracks={filteredTracks} scrollEnabled={false} />
 			</ScrollView>
 		</View>
 	)
